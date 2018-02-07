@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+}
+
+#turnArrow {
+  font-size: 30px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.rules {
+  position: fixed;
+  bottom: 0;
+  background-color: lightgray;
+  width: 100%;
+}
+
+.rules h4 {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+#inputPlayerOneName {
+  width: 200px;
+}
+
+#inputPlayerTwoName {
+  width: 200px;
+}
+
+.game {
+display: none;
+}
+
+#hideme{
+display: none;
+}
+
+.dice{
+  margin: 20px;
+  font-size: 40px;
+  border: 2px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}

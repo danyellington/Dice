@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link href="css/bootstrap.css" rel="stylesheet" text="text/css">
+    <link href="css/styles.css" rel="stylesheet" text="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Pig Dice</h1>
+    </div>
+    <div class="container">
+      <div class="row game">
+        <div class="col-md-4" id="player1">
+          <h3>Name: <span id="playerOneName"></span></h3>
+          <h3>Total Score: <span id="playerOneTotalScore"></span></h3>
+        </div>
+        <div class="col-md-4" id="buttons">
+          <button id="roll" class="btn btn-default">ROLL</button>
+          <button id="hold" class="btn btn-default">HOLD</button>
+        </div>
+        <div class="col-md-4" id="player2">
+          <h3>Name: <span id="playerTwoName"></span></h3>
+          <h3>Total Score:<span id="playerTwoTotalScore"></span></h3>
+        </div>
+      </div>
+      <div class="row game">
+        <div class="col-md-4">
+          <h4>Turn Score: <span id="playerOneTurnScore"></span></h4>
+        </div>
+        <div class="col-md-4" id="turnArrow">
+        </div>
+        <div class="col-md-4">
+          <h4>Turn Score: <span id="playerTwoTurnScore"></span></h4>
+        </div>
+      </div>
+      <div class="row game results">
+        <span class="dice" id="dieOne"></span><span class="dice" id="dieTwo"></span>
+      </div>
+      <div class="playerSelect">
+        <form id="form" class="form-horizontal">
+          <div class="row">
+            <div class="col-md-3">
+              <input class="form-control" type="text" id="inputPlayerOneName" required value="Player 1">
+            </div>
+            <div class="col-md-2">
+              <label class="radio-inline">
+                <input type="radio" name="playersNumber" value="1" checked> 1 Player
+              </label>
+            </div>
+            <div class="col-md-2">
+              <button type="submit" class="btn btn-default">PLAY</button>
+            </div>
+            <div class="col-md-2">
+              <label class="radio-inline" id="p2radioButton">
+                <input type="radio" name="playersNumber" value="2"> 2 Player
+              </label>
+            </div>
+            <div class="col-md-3" id="hideme">
+              <input class="form-control" type="text" id="inputPlayerTwoName" required value="autoPig">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="rules">
+      <h4>Rules</h4>
+      <p>Each turn, a player repeatedly rolls two dice until either a 1 is rolled or the player decides to "hold"</p>
+      <ul style="list-style:none">
+        <li>Two standard dice are rolled. If neither shows a 1, their sum is added to the turn total.</li>
+        <li>If a single 1 is rolled, the player scores nothing and the turn ends.</li>
+        <li>If two 1s are rolled, the player’s entire score is lost, and the turn ends.</li>
+        <li>If a double is rolled, the point total is added to the turn total as with any roll but the player is obligated to roll again</li>
+      </ul>
+      <p>The first player to score 100 or more points wins</p>
+    </div>
+  </body>
+</html>
